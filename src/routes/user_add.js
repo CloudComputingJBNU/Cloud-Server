@@ -14,6 +14,8 @@ router.post("/", (req, res) => {
   let user_nickname = req.body.user_nickname;
   let params;
 
+  console.log(user_id, user_email, user_pw, user_nickname);
+
   sql = "INSERT INTO user(id, email, pw, nickname) VALUES(?, ?, ?, ?);";
   params = [user_id, user_email, user_pw, user_nickname];
 
@@ -27,7 +29,7 @@ router.post("/", (req, res) => {
       resultCode = 200;
       message = "회원가입에 성공했습니다.";
     }
-    console.log(resultCode, "+", message);
+    console.log(resultCode, message);
 
     res.json({
       code: resultCode,
