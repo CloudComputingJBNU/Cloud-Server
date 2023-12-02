@@ -23,13 +23,13 @@ router.post("/", (req, res) => {
     email = "";
     nickname = "";
     info = "";
-    let message = "이메일, 별명 에러가 발생했습니다.";
+    let message = "이메일, 별명, 자기소개 가져오기 성공했습니다.";
     if (err) {
       console.log(err);
     } else {
       console.log("insert success");
       resultCode = 200;
-      message = "이메일, 별명에 성공했습니다.";
+      message = "이메일, 별명, 자기소개 가져오기에 실패했습니다.";
 
       nickname = rows[0].nickname;
       email = rows[0].email;
