@@ -27,7 +27,7 @@ router.post("/", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log("select success  u_id :" + u_id);
+      console.log("select success");
       resultCode = 200;
 
       if (rows.length > 0) {
