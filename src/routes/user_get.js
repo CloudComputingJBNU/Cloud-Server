@@ -15,7 +15,7 @@ router.post("/", (req, res) => {
   console.log(email, nickname);
 
   sql = "SELECT email, nickname, info FROM user where id = ?;";
-  
+
   params = [u_id];
 
   db.query(sql, params, (err, rows, fields) => {
@@ -30,7 +30,7 @@ router.post("/", (req, res) => {
       console.log("select success  u_id :" + u_id);
       resultCode = 200;
 
-      if(rows.length > 0){
+      if (rows.length > 0) {
         message = "이메일, 별명, 자기소개 가져오기에 성공했습니다.";
         nickname = rows[0].nickname;
         email = rows[0].email;

@@ -14,8 +14,6 @@ router.post("/", (req, res) => {
   let user_nickname = req.body.user_nickname;
   let params;
 
-  console.log(user_id, user_email, user_pw, user_nickname);
-
   sql = "INSERT INTO user(id, email, pw, nickname) VALUES(?, ?, ?, ?);";
   params = [user_id, user_email, user_pw, user_nickname];
 
