@@ -16,7 +16,7 @@ router.post("/", (req, res) => {
   if (category_label === "전체 게시글") {
     // 전체 게시글 가져오기
     sql =
-      "SELECT post.id, user.nickname, post.title, post.img FROM post JOIN user ON post.user_id = user.id;";
+      "SELECT post.id, user.nickname, post.title, post.img FROM post JOIN user ON post.user_id = user.id ORDER BY post.id;";
     params = [];
 
     db.query(sql, params, (err, rows, fields) => {
