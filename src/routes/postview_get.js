@@ -26,7 +26,7 @@ params = [post_id];
     img = "";
     contents = "";
     price = "";
-    location = "";f3wvnd9e
+    location = "";
 
     let message = "post.id, post.title, user.nickname, post.img, post.contents, post.price, post.location 가져오기 실패";
     

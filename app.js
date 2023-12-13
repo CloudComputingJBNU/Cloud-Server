@@ -15,7 +15,7 @@ const category_add = require("./src/routes/category_add");
 const user_get = require("./src/routes/user_get");
 const postlist_get = require("./src/routes/postlist_get");
 const user_update = require("./src/routes/user_update");
-const user_update = require("./src/routes/postview_get");
+const postview_get = require("./src/routes/postview_get");
 
 app.use("/user/add", user_add);
 app.use("/post/add", post_add);
