@@ -15,6 +15,7 @@ const category_add = require("./src/routes/category_add");
 const user_get = require("./src/routes/user_get");
 const postlist_get = require("./src/routes/postlist_get");
 const user_update = require("./src/routes/user_update");
+const user_update = require("./src/routes/postview_get");
 
 app.use("/user/add", user_add);
 app.use("/post/add", post_add);
@@ -23,6 +24,7 @@ app.use('/category/add', category_add);
 app.use("/user/get", user_get);
 app.use("/postlist/get", postlist_get);
 app.use("/user/update", user_update);
+app.use("/user/postview/get", postview_get);
 
 app.listen(PORT, () => {
   console.log("Server started on port 3000");
