@@ -19,7 +19,7 @@ router.post("/", (req, res) => {
       "SELECT post.id, user.nickname, post.title, post.img FROM post JOIN user ON post.user_id = user.id WHERE post.id IN (SELECT post_id FROM likes WHERE user_id = ?) ORDER BY post.id;";
   } else if (flag === "mypost") {
     sql =
-      "SELECT post.id, user.nickname, post.title, post.img FROM post JOIN user ON post.user_id = ?;";
+      "SELECT post.id, user.nickname, post.title, post.img FROM post JOIN user ON post.user_id = user.id WHERE post.user_id = ? ORDER BY post.id;";
   }
 
   params = [user_id];
