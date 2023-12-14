@@ -31,6 +31,6 @@ app.use("/user/postview/get", postview_get);
 app.use("/like/post", likepost);
 app.listen(PORT, () => {
   console.log("Server started on port 3000");
-});
-
+});app.get('/health', (req, res) => {
+  res.status(200).send('OK');
 module.exports = app;
